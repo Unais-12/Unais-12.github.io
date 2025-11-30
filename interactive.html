@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Pakistan • Gallery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar glass-nav">
+  <div class="logo">Explore Pakistan</div>
+
+  <ul class="nav-links">
+    <li><a class="nav-link" href="index.html">Home</a></li>
+    <li><a class="nav-link" href="reviews.html">Reviews</a></li>
+    <li><a class="nav-link active" href="interactive.html">Gallery</a></li>
+    <li><a class="nav-link" href="booking.html">Booking</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="dark-toggle">🌙</button>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+
+<div class="page-header fade-in">
+  <button class="btn back-btn">← Back</button>
+  <h1>Interactive Gallery</h1>
+</div>
+
+<section class="gallery-grid fade-in">
+  <img src="images/naran.jpg" class="gallery-item" alt="Naran">
+  <img src="images/hunza.jpg" class="gallery-item" alt="Hunza">
+  <img src="images/lake.jpg" class="gallery-item" alt="Lake">
+  <img src="images/skardu.jpg" class="gallery-item" alt="Skardu">
+  <img src="images/kaghan.jpg" class="gallery-item" alt="Kaghan">
+</section>
+
+<div class="modal" id="modal">
+  <button class="modal-close" id="modalClose">×</button>
+  <img id="modalImage">
+  <div id="modalCaption"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

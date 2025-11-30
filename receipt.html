@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Pakistan • Receipt</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar glass-nav">
+        <div class="logo">Explore Pakistan</div>
+
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="reviews.html">Reviews</a></li>
+            <li><a class="nav-link" href="interactive.html">Gallery</a></li>
+            <li><a class="nav-link active" href="booking.html">Booking</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="dark-toggle">🌙</button>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+    <div class="page-header fade-in">
+        <button class="btn back-btn">← Back</button>
+    </div>
+
+    <div class="receipt-container fade-in">
+        <div class="receipt" id="receipt">
+            
+            <header class="receipt-header">
+                <div class="company-name">EXPLORE PAKISTAN</div>
+                <h1>BOOKING CONFIRMATION</h1>
+                <div class="transaction-info">
+                    Receipt ID: <span id="rID">PCK-647395343</span>
+                </div>
+            </header>
+
+            <div class="separator-dashed"></div>
+
+            <section class="customer-info">
+                <p><strong>BOOKED BY:</strong> <span id="rName"></span></p>
+                <p><strong>EMAIL:</strong> <span id="rEmail"></span></p>
+                <p><strong>TRIP DATE:</strong> <span id="rDate"></span></p>
+            </section>
+
+            <div class="separator-dashed"></div>
+
+            <section class="line-items-header">
+                <span>DESCRIPTION</span>
+                <span class="align-right">AMOUNT</span>
+            </section>
+
+            <div class="separator-dots"></div>
+
+            <section class="line-items">
+                <div class="item">
+                    <span id="rDestination"></span> Package
+                    <span id="rGuests" class="item-qty"></span> Guests
+                    <span id="rPrice" class="align-right item-price"></span>
+                </div>
+
+            </section>
+            
+            <div class="separator-dots"></div>
+
+            <section class="total-section">
+                <strong>TOTAL PAID</strong> 
+                <strong id="rTotal" class="align-left total-amount"></strong>
+            </section>
+
+            <div class="separator-dashed"></div>
+
+            <footer class="receipt-footer">
+                <p>Thank You for Booking with Explore Pakistan!</p>
+                <p>42 Street Building 5 G-11/3, Islamabad</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+    <script src="receipt.js"></script>
+    <script src = "script.js"></script>
+</body>
+</html>

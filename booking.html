@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Pakistan • Destinations</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar glass-nav">
+    <div class="logo">Explore Pakistan</div>
+
+    <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="reviews.html">Reviews</a></li>
+        <li><a class="nav-link" href="interactive.html">Gallery</a></li>
+        <li><a class="nav-link active" href="booking.html">Booking</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <button class="dark-toggle">🌙</button>
+        <button class="menu-toggle">☰</button>
+    </div>
+    </nav>
+    <div class="page-header fade-in">
+        <button class="btn back-btn">← Back</button>
+    </div>
+    <h1>Book Your Trip</h1>
+    <div class = "booking-container fade-in">
+        <form id = "bookingForm">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Name">
+
+            <label>Email</label>
+            <input type = "email" id = "email" placeholder="Email">
+
+            <label>Number of Guests</label>
+            <input type="number" id="guests" min="1" max="20" value="1">
+
+            <label>Destination</label>
+            <select id="destination">
+                <option value="">Select Destination</option>
+                <option value="Naran and Kaghan">Hunza Valley</option>
+                <option value="Skardu">Skardu</option>
+                <option value="Hunza Valley">Swat</option>
+            </select>
+
+            <label>Travel Date</label>
+            <input type = "date" id = "date">
+
+            <button type="button" class="submit-btn" id="submitBtn">
+                 Book Now
+            </button>
+        </form>
+    </div>
+    <script src="booking.js"></script>
+    <script src = "script.js"></script>
+</body>
+</html>
