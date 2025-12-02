@@ -173,9 +173,9 @@ line-height: 1.5;
 .item-table .item-amount      { width: 25%; text-align: right;}
 
 
-.item-table tbody td:nth-child(2) { text-align: right; }
-.item-table tbody td:nth-child(3) { text-align: center; }
-.item-table tbody td:nth-child(4) { text-align: right; }
+.item-table tbody td:nth-child(2) { text-align: right;}
+.item-table tbody td:nth-child(3) { text-align: center;}
+.item-table tbody td:nth-child(4) { text-align: right;}
 
 
 
