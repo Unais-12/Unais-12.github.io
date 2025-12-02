@@ -81,167 +81,160 @@ textarea {
 
 
 body {
- font-family: Arial, sans-serif;
- background: black;
- margin: 0;
- padding: 20px;
+font-family: Arial, sans-serif;
+background: black;
+margin: 0;
+padding: 20px;
 }
 
 /* Receipt container styling */
 .receipt-container {
- width: 90%;
- max-width: 400px; /* Made slightly narrower for a receipt look */
- margin: 40px auto;
- background: white;
- padding: 0; /* Removed padding here to manage it inside the receipt box */
- border-radius: 4px; /* Reduced border-radius */
- box-shadow: 0 4px 15px rgba(0,0,0,0.2);
- text-align: center;
+width: 90%;
+max-width: 400px; /* Made slightly narrower for a receipt look */
+margin: 40px auto;
+background: white;
+padding: 0; /* Removed padding here to manage it inside the receipt box */
+border-radius: 4px; /* Reduced border-radius */
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+text-align: center;
 }
 
 .receipt {
- /* Using a monospaced font for the authentic receipt feel */
- font-family: 'Courier New', Courier, monospace; 
- font-size: 13px;
- text-align: left;
- padding: 25px 20px;
- background: #fff; /* Ensure it's white for a print look */
- border: none; /* Removed outside border */
+font-family: 'Courier New', Courier, monospace; 
+font-size: 13px;
+text-align: left;
+padding: 25px 20px;
+background: #fff; /* Ensure it's white for a print look */
+border: none; /* Removed outside border */
 }
 
-/* Header Styling */
+
 .receipt-header {
- text-align: center;
- margin-bottom: 20px;
+text-align: center;
+margin-bottom: 20px;
 }
 
 .company-name {
- font-weight: bold;
- font-size: 15px;
- margin-bottom: 5px;
+font-weight: bold;
+font-size: 15px;
+margin-bottom: 5px;
 }
 
 .receipt h1 {
- font-family: 'Courier New', Courier, monospace;
- font-size: 20px;
- margin: 5px 0 5px 0;
- font-weight: 900;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+margin: 5px 0 5px 0;
+font-weight: 900;
 }
 
 .transaction-info {
- font-size: 11px;
- margin-bottom: 15px;
+font-size: 11px;
+margin-bottom: 15px;
 }
 
-/* Separators - Mimicking thermal print lines */
+
 .separator-dashed {
- border-top: 1px dashed #333;
- margin: 15px 0;
+border-top: 1px dashed #333;
+margin: 15px 0;
 }
 
 .separator-dots {
- border-top: 1px dotted #333;
- margin: 10px 0;
+border-top: 1px dotted #333;
+margin: 10px 0;
 }
 
-/* Customer and Payment Info */
 .customer-info p, .payment-info p {
- margin: 5px 0;
- line-height: 1.5;
+margin: 5px 0;
+line-height: 1.5;
 }
 
-/* Line Item Structure - Using Flexbox for Two-Column Layout */
-.line-items-header, .item, .subtotal-item, .total-section {
- display: flex;
- justify-content: space-between;
- margin-bottom: 5px;
+
+
+.item-table {
+    width: 100%;
+    font-size: 12px;
+    margin: 15px 0;
+    border: 1px solid black;
+    border-collapse: collapse;     
+    font-family: monospace;        
 }
 
-.line-items-header {
- font-weight: bold;
- margin-bottom: 8px;
+.item-table thead th {
+    text-align: left;
+    padding: 3px 0;
+    font-weight: bold;
+    border: 1px solid black;
 }
 
-.item-qty {
- font-size: 11px;
- color: #666;
- margin-left: 10px;
+
+.item-table .item-description { width: 50%; text-align: left; }
+.item-table .item-price       { width: 15%; text-align: right; }
+.item-table .item-qty         { width: 10%; text-align: center;}
+.item-table .item-amount      { width: 25%; text-align: right;}
+
+
+.item-table tbody td:nth-child(2) { text-align: right; }
+.item-table tbody td:nth-child(3) { text-align: center; }
+.item-table tbody td:nth-child(4) { text-align: right; }
+
+
+
+
+.summary-total {
+margin-top: 15px;
+text-align: right;
 }
 
-.align-right {
- text-align: right;
- flex-shrink: 0; /* Prevents text from wrapping */
+.summary-line {
+display: flex;
+justify-content: space-between;
+margin-bottom: 3px;
+padding-left: 50px; /* Push the label to the right side of the receipt */
 }
 
-/* Total Section Styling */
-.total-section {
- font-size: 16px;
- font-weight: bold;
- padding: 5px 0;
+.summary-line.total-line {
+font-size: 14px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.summary-label {
+font-weight: normal; /* Labels should not be bold except for TOTAL */
 }
 
 .total-amount {
- border-top: 2px solid #000;
- border-bottom: 2px solid #000;
- padding: 2px 0;
+border-top: 2px solid #000;
+border-bottom: 2px solid #000;
+padding: 2px 0;
 }
 
-/* Footer Styling */
+
+.line-items-header, .item, .subtotal-item, .total-section {
+display: none; 
+}
+
+.align-right { text-align: right; flex-shrink: 0; }
+.align-left { text-align: left; flex-shrink: 0; }
+
+
 .receipt-footer {
- text-align: center;
- font-size: 11px;
- margin-top: 20px;
+text-align: center;
+font-size: 11px;
+margin-top: 20px;
 }
 
 .receipt-footer p {
- margin: 3px 0;
+margin: 3px 0;
 }
 
+.receipt-buttons { text-align: center; }
 
-/* Existing Styles */
+.fade-in { opacity: 0; animation: fadeIn 0.6s forwards; }
+@keyframes fadeIn { to { opacity: 1; } }
 
-.receipt-buttons {
- text-align: center;
-}
-
-.print-btn {
- margin-top: 20px;
- padding: 12px 18px;
- background: #008cff;
- color: white;
- border: none;
- border-radius: 8px;
- cursor: pointer;
- font-weight: bold;
-}
-
-.print-btn:hover {
- background: #006edc;
-}
-
-/* Fade-in animation */
-.fade-in {
- opacity: 0;
- animation: fadeIn 0.6s forwards;
-}
-
-@keyframes fadeIn {
- to { opacity: 1; }
-}
-
-/* Dark mode support - Adjusting for new receipt structure */
-.dark-mode .receipt-container {
- background: #1e1e1e;
-}
-
-.dark-mode .receipt {
- background: #2c2c2c;
- color: #f5f5f5; /* Light text in dark mode */
-}
-
-.dark-mode .separator-dashed, .dark-mode .separator-dots {
- border-color: #aaa;
-}
+.dark-mode .receipt-container { background: #1e1e1e; }
+.dark-mode .receipt { background: #2c2c2c; color: #f5f5f5; }
+.dark-mode .separator-dashed, .dark-mode .separator-dots { border-color: #aaa; }
 
 
 

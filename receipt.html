@@ -47,31 +47,48 @@
             </section>
 
             <div class="separator-dashed"></div>
-
-            <section class="line-items-header">
-                <span>DESCRIPTION</span>
-                <span class="align-right">AMOUNT</span>
-            </section>
-
+            <table class="item-table">
+                <thead>
+                    <tr>
+                        <th class="item-description">DESCRIPTION</th>
+                        <th class="item-price">PRICE</th>
+                        <th class="item-qty">QTY</th>
+                        <th class="item-amount">AMOUNT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                       <td><span id="rDestination"></span> Package</td>
+                       <td id="rPricePerGuest"></td>
+                       <td id="rGuests"></td>
+                       <td id="rPrice"></td>
+                   </tr>
+                   <tr>
+                      <td>Service Charge</td>
+                      <td>$100</td>
+                      <td>-</td>
+                      <td id="rServicePrice"></td>
+                   </tr>
+                </tbody>
+            </table>
+                        
             <div class="separator-dots"></div>
 
-            <section class="line-items">
-                <div class="item">
-                    <span id="rDestination"></span> Package
-                    <span id="rGuests" class="item-qty"></span> Guests
-                    <span id="rPrice" class="align-right item-price"></span>
-                </div>
-
+            <section class="summary-total">
+                <div class="summary-line">
+                    <span class="summary-label">Subtotal</span>
+                    <span id="rSubtotal" class="summary-value"></span>
+                </div>
+                <div class="summary-line">
+                    <span class="summary-label">Service Fee</span>
+                    <span id="rFee" class="summary-value"></span>
+                </div>
+                <div class="summary-line total-line">
+                    <strong class="summary-label">TOTAL PAID</strong> 
+                    <strong id="rTotal" class="summary-value total-amount"></strong>
+                </div>
             </section>
-            
-            <div class="separator-dots"></div>
-
-            <section class="total-section">
-                <strong>TOTAL PAID</strong> 
-                <strong id="rTotal" class="align-left total-amount"></strong>
-            </section>
-
-            <div class="separator-dashed"></div>
+                        <div class="separator-dashed"></div>
 
             <footer class="receipt-footer">
                 <p>Thank You for Booking with Explore Pakistan!</p>
